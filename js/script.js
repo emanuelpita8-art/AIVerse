@@ -2,7 +2,7 @@ const heroTitle = "INTELIGENCIA ARTIFICIAL GENERATIVA";
 const el = document.getElementById("tokenStream");
 let i = 0;
 function typeHero() {
-  if (i < heroTitle.length) {
+  if (i <= heroTitle.length) {
     el.innerHTML = heroTitle.slice(0, i) + '<span class="cursor">&nbsp;</span>';
     i++;
     setTimeout(typeHero, 45);
