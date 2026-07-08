@@ -1,0 +1,57 @@
+<svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" rx="18" fill="#14141C"/>
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8FF4D" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FF3B7F" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#edge)" stroke-width="1.1">
+    <!-- layer 1 to 2 -->
+    <g id="l1l2"></g>
+  </g>
+  <script><![CDATA[]]></script>
+  <!-- Nodes -->
+  <g>
+    <!-- layer 1 (input) -->
+    <circle cx="90" cy="90" r="9" fill="#E8E6DF"/>
+    <circle cx="90" cy="170" r="9" fill="#E8E6DF"/>
+    <circle cx="90" cy="250" r="9" fill="#E8E6DF"/>
+    <circle cx="90" cy="330" r="9" fill="#E8E6DF"/>
+    <!-- layer 2 (hidden) -->
+    <circle cx="280" cy="60" r="9" fill="#C8FF4D"/>
+    <circle cx="280" cy="140" r="9" fill="#C8FF4D"/>
+    <circle cx="280" cy="220" r="9" fill="#C8FF4D"/>
+    <circle cx="280" cy="300" r="9" fill="#C8FF4D"/>
+    <circle cx="280" cy="380" r="9" fill="#C8FF4D"/>
+    <!-- layer 3 (hidden) -->
+    <circle cx="440" cy="100" r="9" fill="#C8FF4D"/>
+    <circle cx="440" cy="190" r="9" fill="#C8FF4D"/>
+    <circle cx="440" cy="280" r="9" fill="#C8FF4D"/>
+    <circle cx="440" cy="360" r="9" fill="#C8FF4D"/>
+    <!-- layer 4 (output) -->
+    <circle cx="560" cy="150" r="10" fill="#FF3B7F"/>
+    <circle cx="560" cy="260" r="10" fill="#FF3B7F"/>
+  </g>
+  <!-- edges 1->2 -->
+  <g stroke="#C8FF4D" stroke-opacity="0.25" stroke-width="1">
+    <line x1="90" y1="90" x2="280" y2="60"/><line x1="90" y1="90" x2="280" y2="140"/><line x1="90" y1="90" x2="280" y2="220"/>
+    <line x1="90" y1="170" x2="280" y2="60"/><line x1="90" y1="170" x2="280" y2="140"/><line x1="90" y1="170" x2="280" y2="220"/><line x1="90" y1="170" x2="280" y2="300"/>
+    <line x1="90" y1="250" x2="280" y2="140"/><line x1="90" y1="250" x2="280" y2="220"/><line x1="90" y1="250" x2="280" y2="300"/><line x1="90" y1="250" x2="280" y2="380"/>
+    <line x1="90" y1="330" x2="280" y2="220"/><line x1="90" y1="330" x2="280" y2="300"/><line x1="90" y1="330" x2="280" y2="380"/>
+  </g>
+  <!-- edges 2->3 -->
+  <g stroke="#FF3B7F" stroke-opacity="0.25" stroke-width="1">
+    <line x1="280" y1="60" x2="440" y2="100"/><line x1="280" y1="140" x2="440" y2="100"/><line x1="280" y1="140" x2="440" y2="190"/>
+    <line x1="280" y1="220" x2="440" y2="190"/><line x1="280" y1="220" x2="440" y2="280"/><line x1="280" y1="300" x2="440" y2="280"/>
+    <line x1="280" y1="300" x2="440" y2="360"/><line x1="280" y1="380" x2="440" y2="360"/>
+  </g>
+  <!-- edges 3->4 -->
+  <g stroke="#E8E6DF" stroke-opacity="0.3" stroke-width="1">
+    <line x1="440" y1="100" x2="560" y2="150"/><line x1="440" y1="190" x2="560" y2="150"/>
+    <line x1="440" y1="280" x2="560" y2="260"/><line x1="440" y1="360" x2="560" y2="260"/>
+  </g>
+  <text x="90" y="380" fill="#8B8A82" font-family="monospace" font-size="13" text-anchor="middle">entrada</text>
+  <text x="360" y="410" fill="#8B8A82" font-family="monospace" font-size="13" text-anchor="middle">capas ocultas (atención)</text>
+  <text x="560" y="300" fill="#8B8A82" font-family="monospace" font-size="13" text-anchor="middle">salida</text>
+</svg>

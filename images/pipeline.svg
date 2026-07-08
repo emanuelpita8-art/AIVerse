@@ -1,0 +1,44 @@
+<svg viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="240" rx="18" fill="#F1EEE6"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1C1B1F"/>
+    </marker>
+  </defs>
+  <g font-family="monospace" font-size="14" fill="#1C1B1F">
+    <!-- step boxes -->
+    <g>
+      <rect x="30" y="90" width="140" height="60" rx="10" fill="#14141C"/>
+      <text x="100" y="115" text-anchor="middle" fill="#C8FF4D" font-weight="bold">DATOS</text>
+      <text x="100" y="135" text-anchor="middle" fill="#E8E6DF" font-size="11">texto, imagen, audio</text>
+    </g>
+    <line x1="170" y1="120" x2="215" y2="120" stroke="#1C1B1F" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g>
+      <rect x="220" y="90" width="150" height="60" rx="10" fill="#14141C"/>
+      <text x="295" y="115" text-anchor="middle" fill="#C8FF4D" font-weight="bold">ENTRENAMIENTO</text>
+      <text x="295" y="135" text-anchor="middle" fill="#E8E6DF" font-size="11">redes neuronales</text>
+    </g>
+    <line x1="370" y1="120" x2="415" y2="120" stroke="#1C1B1F" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g>
+      <rect x="420" y="90" width="140" height="60" rx="10" fill="#14141C"/>
+      <text x="490" y="115" text-anchor="middle" fill="#C8FF4D" font-weight="bold">MODELO</text>
+      <text x="490" y="135" text-anchor="middle" fill="#E8E6DF" font-size="11">parámetros ajustados</text>
+    </g>
+    <line x1="560" y1="120" x2="605" y2="120" stroke="#1C1B1F" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g>
+      <rect x="610" y="90" width="130" height="60" rx="10" fill="#14141C"/>
+      <text x="675" y="115" text-anchor="middle" fill="#FF3B7F" font-weight="bold">PROMPT</text>
+      <text x="675" y="135" text-anchor="middle" fill="#E8E6DF" font-size="11">instrucción</text>
+    </g>
+    <line x1="740" y1="120" x2="785" y2="120" stroke="#1C1B1F" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g>
+      <rect x="790" y="90" width="90" height="60" rx="10" fill="#C8FF4D"/>
+      <text x="835" y="125" text-anchor="middle" fill="#14141C" font-weight="bold">SALIDA</text>
+    </g>
+  </g>
+  <text x="450" y="205" text-anchor="middle" fill="#5b5a54" font-family="monospace" font-size="12">Pipeline general de un modelo de IA generativa</text>
+</svg>
