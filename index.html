@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inteligencia Artificial Generativa | Proyecto TIC</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500;700&display=swap"
@@ -24,6 +24,36 @@
           <a href="#ventajas-riesgos">Ventajas y riesgos</a>
           <a href="#comparativa">Comparativa</a>
           <a href="#fuentes">Fuentes</a>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Cambiar entre modo claro y oscuro"
+          >
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4.5" />
+              <path
+                d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
@@ -57,6 +87,31 @@
       </div>
     </header>
 
+    <section class="stats-section" id="stats">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num" data-target="100" data-suffix=" M+">0</div>
+            <div class="stat-label">Usuarios de ChatGPT</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="2017" data-format="year">
+              2017
+            </div>
+            <div class="stat-label">Nacimiento del Transformer</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="500" data-suffix="+">0</div>
+            <div class="stat-label">Modelos de IA publicados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="80" data-suffix="%">0</div>
+            <div class="stat-label">Empresas que ya experimentan con IA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="block" id="que-es">
       <div class="wrap">
         <div class="section-head">
@@ -69,7 +124,13 @@
           </p>
         </div>
         <div class="grid cols-2">
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="De analizar a crear"
+            data-modal-body="Durante años, la IA se dedicó sobre todo a tareas de clasificación: reconocer un rostro, filtrar un correo, recomendar un producto — sistemas discriminativos que separan datos en categorías. La IA Generativa da un paso distinto: aprende la distribución estadística completa de sus datos de entrenamiento (un modelo generativo, en sentido matemático) y la usa para producir ejemplos nuevos que nunca existieron pero son plausibles. Es la diferencia entre reconocer un rostro en una foto y pintar un rostro que nadie ha visto."
+          >
             <h3>De analizar a crear</h3>
             <p>
               Durante años, la inteligencia artificial se dedicó sobre todo a
@@ -83,7 +144,13 @@
               >GPT · Claude · Gemini · DALL·E · Midjourney</span
             >
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Un vocabulario técnico esencial"
+            data-modal-body="Modelo de lenguaje (LLM): red neuronal entrenada con enormes volúmenes de texto para predecir, en cada paso, la palabra más probable a continuación. Transformer: la arquitectura de 2017 basada en el mecanismo de atención, que permite al modelo sopesar qué partes del texto son relevantes entre sí sin procesar palabra por palabra en orden estricto. Prompt: la instrucción o pregunta que el usuario escribe, el único 'control' que tiene sobre la generación. Token: la unidad mínima de texto que el modelo procesa — a veces una palabra completa, a veces solo una sílaba o un signo de puntuación."
+          >
             <h3>Un vocabulario técnico esencial</h3>
             <p>
               <strong>Modelo de lenguaje (LLM):</strong> red entrenada con
@@ -128,7 +195,13 @@
           height="240"
         />
         <div class="grid cols-2">
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Entrenamiento"
+            data-modal-body="El modelo procesa billones de palabras (o millones de imágenes) y ajusta miles de millones de parámetros internos para predecir qué viene después con la menor cantidad de error posible. Ese primer entrenamiento (preentrenamiento) le da al modelo su conocimiento general del lenguaje o las imágenes. Luego se afina con retroalimentación humana (RLHF, Reinforcement Learning from Human Feedback): personas comparan respuestas y el modelo aprende a preferir las que resultan más útiles, seguras y alineadas con lo que se le pidió."
+          >
             <h3>Entrenamiento</h3>
             <p>
               El modelo procesa billones de palabras (o millones de imágenes) y
@@ -137,7 +210,13 @@
               que sus respuestas sean más útiles y seguras.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Generación"
+            data-modal-body="Al recibir un prompt, un modelo de texto produce su salida token por token: calcula una distribución de probabilidad sobre todo su vocabulario y elige (o muestrea) el siguiente token, una y otra vez. Los modelos de imagen como DALL·E o Midjourney funcionan distinto: parten de ruido puro y, guiados por el texto de entrada, lo van 'revirtiendo' paso a paso hasta que del ruido emerge una imagen coherente — este proceso se llama difusión."
+          >
             <h3>Generación</h3>
             <p>
               Al recibir un prompt, el modelo produce su salida token por token
@@ -173,6 +252,80 @@
       </div>
     </section>
 
+    <section class="carousel-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">02b · En cámara lenta</div>
+          <h2>De ruido puro a imagen: un modelo de difusión, paso a paso</h2>
+          <p>
+            Así es como DALL·E o Midjourney "dibujan": no trazan líneas, van
+            limpiando ruido hasta que aparece una forma reconocible.
+          </p>
+        </div>
+        <div class="carousel" id="diffusionCarousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <svg viewBox="0 0 300 300">
+                <rect width="300" height="300" fill="#12151b" />
+                <g id="n1"></g>
+              </svg>
+              <div class="carousel-caption">Paso 0 — ruido puro (t = 1000)</div>
+            </div>
+            <div class="carousel-slide">
+              <svg viewBox="0 0 300 300">
+                <rect width="300" height="300" fill="#12151b" />
+                <g id="n2"></g>
+              </svg>
+              <div class="carousel-caption">
+                Paso 1 — empiezan a insinuarse formas (t = 650)
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <svg viewBox="0 0 300 300">
+                <rect width="300" height="300" fill="#12151b" />
+                <g id="n3"></g>
+              </svg>
+              <div class="carousel-caption">
+                Paso 2 — la composición se define (t = 300)
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <svg viewBox="0 0 300 300">
+                <rect width="300" height="300" fill="#12151b" />
+                <circle cx="150" cy="120" r="55" fill="#c8ff5c" opacity="0.9" />
+                <rect
+                  x="90"
+                  y="170"
+                  width="120"
+                  height="90"
+                  rx="14"
+                  fill="#5cd6ff"
+                  opacity="0.85"
+                />
+                <circle cx="150" cy="120" r="18" fill="#101318" />
+              </svg>
+              <div class="carousel-caption">Paso 3 — imagen final (t = 0)</div>
+            </div>
+          </div>
+          <button
+            class="carousel-nav carousel-prev"
+            id="carPrev"
+            aria-label="Anterior"
+          >
+            ‹
+          </button>
+          <button
+            class="carousel-nav carousel-next"
+            id="carNext"
+            aria-label="Siguiente"
+          >
+            ›
+          </button>
+          <div class="carousel-dots" id="carDots"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="block" id="aplicaciones">
       <div class="wrap">
         <div class="section-head">
@@ -184,42 +337,78 @@
           </p>
         </div>
         <div class="grid cols-3">
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Educación"
+            data-modal-body="Khanmigo (Khan Academy) actúa como tutor virtual disponible 24/7: en vez de dar la respuesta directa, hace preguntas guía al estilo socrático para que el estudiante llegue a la solución por su cuenta. También ayuda a docentes a preparar planes de clase y a generar ejercicios adaptados al nivel de cada estudiante."
+          >
             <h3>Educación</h3>
             <p>
               Khanmigo actúa como tutor virtual, guiando al estudiante con
               preguntas en vez de dar la respuesta directa.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Salud"
+            data-modal-body="AlphaFold (DeepMind) predice la estructura tridimensional de una proteína a partir de su secuencia de aminoácidos, un problema que antes tomaba años de trabajo de laboratorio. Al conocer la forma de una proteína, los investigadores pueden diseñar medicamentos que encajen con ella con mucha más precisión y velocidad, acelerando el desarrollo de tratamientos para enfermedades como el cáncer o enfermedades raras."
+          >
             <h3>Salud</h3>
             <p>
               AlphaFold predice estructuras de proteínas, acelerando el diseño
               de nuevos medicamentos.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Software"
+            data-modal-body="GitHub Copilot sugiere líneas o bloques completos de código directamente en el editor, entrenado con enormes cantidades de código público. Puede completar funciones a partir de un comentario, escribir pruebas unitarias o traducir lógica entre lenguajes, actuando como un par de programación disponible todo el tiempo — aunque siempre requiere revisión humana."
+          >
             <h3>Software</h3>
             <p>
               GitHub Copilot sugiere y completa código dentro del propio editor
               del programador.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Marketing"
+            data-modal-body="Los equipos de mercadeo usan modelos generativos para producir borradores de campañas, variaciones de anuncios, textos para redes sociales y correos personalizados en minutos en vez de días. Esto no reemplaza la estrategia creativa, pero multiplica la cantidad de opciones que un equipo pequeño puede probar antes de elegir la mejor."
+          >
             <h3>Marketing</h3>
             <p>
               Equipos de mercadeo generan borradores de campañas y contenido
               para redes en minutos.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Industria creativa"
+            data-modal-body="Midjourney genera imágenes de alta calidad estética a partir de una descripción de texto, y Runway hace lo mismo con video corto, incluyendo edición asistida (quitar objetos, extender escenas, generar efectos). Estudios de diseño, cine y videojuegos los usan como herramienta de exploración rápida — un boceto de dirección de arte antes de invertir en producción real."
+          >
             <h3>Industria creativa</h3>
             <p>
               Midjourney y Runway generan bocetos visuales y video como punto de
               partida creativo.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card"
+            tabindex="0"
+            data-modal
+            data-modal-title="Atención al cliente"
+            data-modal-body="Los chatbots generativos entienden lenguaje natural (no solo palabras clave fijas) y mantienen contexto a lo largo de una conversación, por lo que pueden resolver consultas frecuentes, hacer seguimiento de pedidos o escalar a un humano solo cuando el caso realmente lo requiere — reduciendo tiempos de espera para el cliente y volumen repetitivo para el equipo de soporte."
+          >
             <h3>Atención al cliente</h3>
             <p>
               Chatbots generativos resuelven consultas frecuentes con lenguaje
@@ -414,12 +603,307 @@
       </div>
     </section>
 
+    <button id="topBtn" title="Volver arriba" aria-label="Volver arriba">
+      ↑
+    </button>
+
+    <!-- Modal genérico para tarjetas -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Cerrar">
+          ✕
+        </button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalBody"></p>
+      </div>
+    </div>
+
+    <!-- Widget de IA embebida -->
+    <button id="aiToggle" type="button">
+      <span class="dot"></span> Pregúntale a la IA
+    </button>
+    <div id="aiPanel">
+      <div class="ai-head">
+        <span>Asistente del proyecto <span class="tag">demo</span></span>
+        <button id="aiClose" aria-label="Cerrar chat">✕</button>
+      </div>
+      <div class="ai-messages" id="aiMessages">
+        <div class="ai-msg bot">
+          Hola 👋 Soy un modelo generativo funcionando dentro de esta misma
+          página. Pregúntame algo sobre transformers, difusión, tokens o
+          cualquier tema del artículo.
+        </div>
+      </div>
+      <div class="ai-input-row">
+        <input
+          type="text"
+          id="aiInput"
+          placeholder="Escribe tu pregunta..."
+          maxlength="300"
+        />
+        <button id="aiSend" aria-label="Enviar">➤</button>
+      </div>
+    </div>
+
     <footer>
       Universidad Tecnológica de Panamá — Tecnologías de la Información y
       Comunicación — Proyecto Final<br />
       Profesor: Ing. Jorge Núñez<br />
       Desarrolladores: Emanuel Pita y Kenny García
     </footer>
-    <script src="/Pagina_Web_IA_Generativa/js/script.js" defer></script>
+
+    <script>
+      /* ---------- Hero: texto tipo "streaming de tokens" ---------- */
+      const heroTitle = "INTELIGENCIA ARTIFICIAL GENERATIVA";
+      const el = document.getElementById("tokenStream");
+      let i = 0;
+      function typeHero() {
+        if (i <= heroTitle.length) {
+          el.innerHTML =
+            heroTitle.slice(0, i) + '<span class="cursor">&nbsp;</span>';
+          i++;
+          setTimeout(typeHero, 45);
+        } else {
+          el.innerHTML = heroTitle + '<span class="cursor">&nbsp;</span>';
+        }
+      }
+      typeHero();
+
+      const promptText = "explica la IA generativa en una frase";
+      const outputText =
+        "Es un sistema que aprende patrones de datos para crear texto, imágenes o código completamente nuevos.";
+      const pEl = document.getElementById("demoPrompt");
+      const oEl = document.getElementById("demoOutput");
+      function typeInto(target, text, speed, done) {
+        let j = 0;
+        (function step() {
+          if (j <= text.length) {
+            target.textContent = text.slice(0, j);
+            j++;
+            setTimeout(step, speed);
+          } else if (done) {
+            done();
+          }
+        })();
+      }
+      function runDemo() {
+        pEl.textContent = "";
+        oEl.textContent = "";
+        typeInto(pEl, promptText, 38, () => {
+          setTimeout(
+            () =>
+              typeInto(oEl, outputText, 22, () => {
+                setTimeout(runDemo, 3500);
+              }),
+            500,
+          );
+        });
+      }
+      runDemo();
+
+      /* ---------- Revelado al hacer scroll ---------- */
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      });
+      document.querySelectorAll("section").forEach((sec) => {
+        sec.classList.add("reveal");
+        observer.observe(sec);
+      });
+
+      /* ---------- Barra de progreso de scroll ---------- */
+      window.addEventListener("scroll", () => {
+        const total =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / total) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      });
+
+      /* ---------- Botón "volver arriba" ---------- */
+      const topBtn = document.getElementById("topBtn");
+      window.addEventListener("scroll", () => {
+        topBtn.classList.toggle("show", window.scrollY > 500);
+      });
+      topBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      /* ---------- Contadores animados ---------- */
+      const statEls = document.querySelectorAll(".stat-num");
+      const statObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const node = entry.target;
+            if (node.dataset.done) return;
+            node.dataset.done = "1";
+            const target = parseInt(node.dataset.target, 10);
+            const suffix = node.dataset.suffix || "";
+            const isYear = node.dataset.format === "year";
+            const duration = 1400;
+            const start = performance.now();
+            function tick(now) {
+              const p = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - p, 3);
+              const val = Math.floor(eased * target);
+              node.textContent = isYear
+                ? val
+                : val.toLocaleString("es-PA") + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+              else
+                node.textContent = isYear
+                  ? target
+                  : target.toLocaleString("es-PA") + suffix;
+            }
+            requestAnimationFrame(tick);
+          });
+        },
+        { threshold: 0.5 },
+      );
+      statEls.forEach((n) => statObserver.observe(n));
+
+      /* ---------- Tarjetas interactivas (modal) ---------- */
+      const modalOverlay = document.getElementById("modalOverlay");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalBody = document.getElementById("modalBody");
+      const modalClose = document.getElementById("modalClose");
+
+      function openModal(title, body) {
+        modalTitle.textContent = title;
+        modalBody.textContent = body;
+        modalOverlay.classList.add("show");
+      }
+      function closeModal() {
+        modalOverlay.classList.remove("show");
+      }
+      document.querySelectorAll(".card[data-modal]").forEach((card) => {
+        card.addEventListener("click", () =>
+          openModal(card.dataset.modalTitle, card.dataset.modalBody),
+        );
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openModal(card.dataset.modalTitle, card.dataset.modalBody);
+          }
+        });
+      });
+      modalClose.addEventListener("click", closeModal);
+      modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      /* ---------- Carrusel de difusión ---------- */
+      const track = document.getElementById("carouselTrack");
+      const slides = track.children;
+      const dotsWrap = document.getElementById("carDots");
+      let current = 0;
+      for (let s = 0; s < slides.length; s++) {
+        const dot = document.createElement("button");
+        if (s === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => goToSlide(s));
+        dotsWrap.appendChild(dot);
+      }
+      function renderNoise(id, density, sizeRange) {
+        const g = document.getElementById(id);
+        if (!g) return;
+        let html = "";
+        for (let n = 0; n < density; n++) {
+          const x = Math.random() * 300;
+          const y = Math.random() * 300;
+          const r =
+            sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
+          const shade = Math.floor(Math.random() * 120) + 40;
+          html += `<circle cx="${x}" cy="${y}" r="${r}" fill="rgb(${shade},${shade},${shade})" opacity="0.7"/>`;
+        }
+        g.innerHTML = html;
+      }
+      renderNoise("n1", 900, [1, 2.4]);
+      renderNoise("n2", 500, [2, 5]);
+      renderNoise("n3", 220, [4, 10]);
+
+      function goToSlide(idx) {
+        current = (idx + slides.length) % slides.length;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        [...dotsWrap.children].forEach((d, di) =>
+          d.classList.toggle("active", di === current),
+        );
+      }
+      document
+        .getElementById("carPrev")
+        .addEventListener("click", () => goToSlide(current - 1));
+      document
+        .getElementById("carNext")
+        .addEventListener("click", () => goToSlide(current + 1));
+
+      /* ---------- Fondo animado de partículas ---------- */
+      (function initParticles() {
+        const container = document.getElementById("particles-js");
+        const canvas = document.createElement("canvas");
+        container.appendChild(canvas);
+        const ctx = canvas.getContext("2d");
+        let w, h, particles;
+
+        function resize() {
+          w = canvas.width = container.offsetWidth;
+          h = canvas.height = container.offsetHeight;
+        }
+        function makeParticles() {
+          const count = Math.min(70, Math.floor((w * h) / 16000));
+          particles = Array.from({ length: count }, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.35,
+            vy: (Math.random() - 0.5) * 0.35,
+          }));
+        }
+        function isLight() {
+          return rootEl.getAttribute("data-theme") === "light";
+        }
+        function draw() {
+          ctx.clearRect(0, 0, w, h);
+          const lineColor = isLight() ? "rgba(20,20,20," : "rgba(200,255,92,";
+          const dotColor = isLight()
+            ? "rgba(20,20,20,0.5)"
+            : "rgba(200,255,92,0.7)";
+          for (let a = 0; a < particles.length; a++) {
+            const p = particles[a];
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+            ctx.fillStyle = dotColor;
+            ctx.fill();
+            for (let b = a + 1; b < particles.length; b++) {
+              const q = particles[b];
+              const d = Math.hypot(p.x - q.x, p.y - q.y);
+              if (d < 120) {
+                ctx.strokeStyle = lineColor + (1 - d / 120) * 0.35 + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(q.x, q.y);
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(draw);
+        }
+        window.addEventListener("resize", () => {
+          resize();
+          makeParticles();
+        });
+        resize();
+        makeParticles();
+        draw();
+      })();
+    </script>
   </body>
 </html>
