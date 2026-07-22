@@ -86,6 +86,7 @@ h3 {
 p {
   margin: 0 0 1em;
   color: var(--muted);
+  text-align: justify;
 }
 
 a {
@@ -97,7 +98,6 @@ img {
   display: block;
 }
 
-/* ---------------- Nav ---------------- */
 nav {
   position: sticky;
   top: 0;
@@ -142,7 +142,6 @@ nav {
   color: var(--skyblue);
 }
 
-/* Theme toggle */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -180,7 +179,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   display: block;
 }
 
-/* ---------------- Hero ---------------- */
 .hero {
   position: relative;
   padding: 120px 0 90px;
@@ -319,7 +317,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   color: var(--skyblue);
 }
 
-/* Terminal demo */
 .demo {
   background: var(--card);
   border: 1px solid var(--border);
@@ -370,7 +367,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   min-height: 3.2em;
 }
 
-/* ---------------- Stats / contadores ---------------- */
 .stats-section {
   padding: 50px 0;
   border-bottom: 1px solid var(--border);
@@ -427,7 +423,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   }
 }
 
-/* ---------------- Sections ---------------- */
 .block {
   padding: 100px 0;
 }
@@ -552,7 +547,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   border: 0;
 }
 
-/* ---------------- Carrusel ---------------- */
 .carousel-section {
   padding: 90px 0;
 }
@@ -645,7 +639,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   border-radius: 4px;
 }
 
-/* ---------------- Ventajas / riesgos ---------------- */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -685,7 +678,6 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   margin-bottom: 10px;
 }
 
-/* ---------------- Tabla comparativa ---------------- */
 table.compare {
   width: 100%;
   border-collapse: collapse;
@@ -716,7 +708,6 @@ table.compare tr:last-child td {
   border-bottom: none;
 }
 
-/* ---------------- Fuentes ---------------- */
 .sources {
   list-style: none;
   margin: 0;
@@ -748,14 +739,12 @@ table.compare tr:last-child td {
   text-decoration: underline;
 }
 
-/* ---------------- CTA final ---------------- */
 .cta {
   text-align: center;
   max-width: 680px;
   margin: 0 auto;
 }
 
-/* ---------------- Reveal on scroll ---------------- */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -769,7 +758,6 @@ table.compare tr:last-child td {
   transform: translateY(0);
 }
 
-/* ---------------- Botón subir arriba ---------------- */
 #topBtn {
   position: fixed;
   right: 24px;
@@ -802,7 +790,6 @@ table.compare tr:last-child td {
   background: var(--skyblue-dim);
 }
 
-/* ---------------- Modal ---------------- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -866,8 +853,6 @@ table.compare tr:last-child td {
   color: var(--skyblue);
 }
 
-
-/* ---------------- Footer ---------------- */
 footer {
   text-align: center;
   padding: 40px 20px 60px;

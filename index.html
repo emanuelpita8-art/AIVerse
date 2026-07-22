@@ -513,48 +513,63 @@
             que acompaña esta página.
           </p>
         </div>
+
         <ul class="sources">
           <li>
-            Vaswani et al. (2017) — Attention Is All You Need
+            IBM — ¿Qué es la inteligencia artificial generativa?
             <a
-              href="https://arxiv.org/abs/1706.03762"
+              href="https://www.ibm.com/es-es/think/topics/generative-ai"
               target="_blank"
               rel="noopener"
-              >arxiv.org/abs/1706.03762</a
             >
+              ibm.com/es-es/think/topics/generative-ai
+            </a>
           </li>
+
           <li>
-            Goodfellow et al. (2014) — Generative Adversarial Networks
+            Amazon Web Services (AWS) — ¿Qué es la IA generativa?
             <a
-              href="https://arxiv.org/abs/1406.2661"
+              href="https://aws.amazon.com/es/what-is/generative-ai/"
               target="_blank"
               rel="noopener"
-              >arxiv.org/abs/1406.2661</a
             >
+              aws.amazon.com/es/what-is/generative-ai/
+            </a>
           </li>
+
           <li>
-            OpenAI — GPT-4 Technical Report
+            Universidad de Navarra — Usos y aplicaciones de la inteligencia
+            artificial generativa
             <a
-              href="https://openai.com/research/gpt-4"
+              href="https://biblioguias.unav.edu/inteligencia-artificial-generativa/usos-aplicaciones"
               target="_blank"
               rel="noopener"
-              >openai.com/research/gpt-4</a
             >
+              biblioguias.unav.edu/inteligencia-artificial-generativa/usos-aplicaciones
+            </a>
           </li>
+
           <li>
-            McKinsey Global Institute — The economic potential of generative AI
-            <a href="https://www.mckinsey.com" target="_blank" rel="noopener"
-              >mckinsey.com</a
-            >
-          </li>
-          <li>
-            Jumper et al. (2021) — AlphaFold, Nature
+            Google Cloud — ¿Qué es la inteligencia artificial?
             <a
-              href="https://www.nature.com/articles/s41586-021-03819-2"
+              href="https://cloud.google.com/learn/what-is-artificial-intelligence?hl=es-419"
               target="_blank"
               rel="noopener"
-              >nature.com/articles/s41586-021-03819-2</a
             >
+              cloud.google.com/learn/what-is-artificial-intelligence
+            </a>
+          </li>
+
+          <li>
+            University of British Columbia Library — Evaluación del uso de IA
+            generativa
+            <a
+              href="https://guides-library-ubc-ca.translate.goog/GenAI/Evaluating?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
+              target="_blank"
+              rel="noopener"
+            >
+              guides-library-ubc-ca.translate.goog/GenAI/Evaluating
+            </a>
           </li>
         </ul>
       </div>
@@ -577,7 +592,6 @@
       ↑
     </button>
 
-    <!-- Modal genérico para tarjetas -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal-box">
         <button class="modal-close" id="modalClose" aria-label="Cerrar">
@@ -596,7 +610,6 @@
     </footer>
 
     <script>
-      /* ---------- Hero: texto tipo "streaming de tokens" ---------- */
       const heroTitle = "INTELIGENCIA ARTIFICIAL GENERATIVA";
       const el = document.getElementById("tokenStream");
       let i = 0;
@@ -644,7 +657,6 @@
       }
       runDemo();
 
-      /* ---------- Revelado al hacer scroll ---------- */
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -657,7 +669,6 @@
         observer.observe(sec);
       });
 
-      /* ---------- Barra de progreso de scroll ---------- */
       window.addEventListener("scroll", () => {
         const total =
           document.documentElement.scrollHeight - window.innerHeight;
@@ -665,7 +676,6 @@
         document.getElementById("progressBar").style.width = progress + "%";
       });
 
-      /* ---------- Botón "volver arriba" ---------- */
       const topBtn = document.getElementById("topBtn");
       window.addEventListener("scroll", () => {
         topBtn.classList.toggle("show", window.scrollY > 500);
@@ -674,7 +684,6 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
-      /* ---------- Contadores animados ---------- */
       const statEls = document.querySelectorAll(".stat-num");
       const statObserver = new IntersectionObserver(
         (entries) => {
@@ -708,7 +717,6 @@
       );
       statEls.forEach((n) => statObserver.observe(n));
 
-      /* ---------- Tarjetas interactivas (modal) ---------- */
       const modalOverlay = document.getElementById("modalOverlay");
       const modalTitle = document.getElementById("modalTitle");
       const modalBody = document.getElementById("modalBody");
@@ -741,7 +749,6 @@
         if (e.key === "Escape") closeModal();
       });
 
-      /* ---------- Carrusel de difusión ---------- */
       const track = document.getElementById("carouselTrack");
       const slides = track.children;
       const dotsWrap = document.getElementById("carDots");
@@ -784,7 +791,6 @@
         .getElementById("carNext")
         .addEventListener("click", () => goToSlide(current + 1));
 
-      /* ---------- Fondo animado de partículas ---------- */
       (function initParticles() {
         const container = document.getElementById("particles-js");
         const canvas = document.createElement("canvas");
