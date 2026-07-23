@@ -12,6 +12,7 @@
     />
   </head>
   <body>
+    <!-- ===================== NAVBAR ===================== -->
     <nav>
       <div class="navwrap">
         <a class="brand" href="#inicio">
@@ -28,6 +29,7 @@
       </div>
     </nav>
 
+    <!-- =====================  PORTADA ===================== -->
     <header class="hero" id="inicio">
       <div id="particles-js"></div>
       <div class="grid-bg"></div>
@@ -45,6 +47,7 @@
           <a class="btn btn-ghost" href="#como-funciona">Ver cómo funciona</a>
         </div>
 
+        <!-- Demo simulada de prompt -->
         <div class="demo">
           <div class="demo-bar"><span></span><span></span><span></span></div>
           <div class="demo-body">
@@ -57,6 +60,7 @@
       </div>
     </header>
 
+    <!-- ===================== Stats ===================== -->
     <section class="stats-section" id="stats">
       <div class="wrap">
         <div class="stats-grid">
@@ -82,6 +86,7 @@
       </div>
     </section>
 
+    <!-- ===================== Primera Parte ===================== -->
     <section class="block" id="que-es">
       <div class="wrap">
         <div class="section-head">
@@ -147,6 +152,7 @@
       </div>
     </section>
 
+    <!-- ===================== Segunda Parte ===================== -->
     <section class="block alt" id="como-funciona">
       <div class="wrap">
         <div class="section-head">
@@ -222,6 +228,7 @@
       </div>
     </section>
 
+    <!-- ===================== Carrusel ===================== -->
     <section class="carousel-section">
       <div class="wrap">
         <div class="section-head">
@@ -296,6 +303,7 @@
       </div>
     </section>
 
+    <!-- ===================== Tercera Parte ===================== -->
     <section class="block" id="aplicaciones">
       <div class="wrap">
         <div class="section-head">
@@ -389,6 +397,7 @@
       </div>
     </section>
 
+    <!-- ===================== Cuarta Parte ===================== -->
     <section class="block alt" id="ventajas-riesgos">
       <div class="wrap">
         <div class="section-head">
@@ -448,6 +457,7 @@
       </div>
     </section>
 
+    <!-- ===================== Quinta Parte ===================== -->
     <section class="block" id="comparativa">
       <div class="wrap">
         <div class="section-head">
@@ -503,6 +513,7 @@
       </div>
     </section>
 
+    <!-- ===================== Sexta Parte ===================== -->
     <section class="block alt" id="fuentes">
       <div class="wrap">
         <div class="section-head">
@@ -575,6 +586,7 @@
       </div>
     </section>
 
+    <!-- ===================== Cita Final ===================== -->
     <section class="block">
       <div class="wrap">
         <div class="cta">
@@ -592,6 +604,7 @@
       ↑
     </button>
 
+    <!-- ===================== Tarjetas ===================== -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal-box">
         <button class="modal-close" id="modalClose" aria-label="Cerrar">
@@ -610,6 +623,7 @@
     </footer>
 
     <script>
+      // ===================== HERO: título  =====================
       const heroTitle = "INTELIGENCIA ARTIFICIAL GENERATIVA";
       const el = document.getElementById("tokenStream");
       let i = 0;
@@ -625,6 +639,7 @@
       }
       typeHero();
 
+      // ===================== HERO: demo de prompt =====================
       const promptText = "explica la IA generativa en una frase";
       const outputText =
         "Es un sistema que aprende patrones de datos para crear texto, imágenes o código completamente nuevos.";
@@ -657,6 +672,7 @@
       }
       runDemo();
 
+      // ===================== Scroll reveal =====================
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -669,6 +685,7 @@
         observer.observe(sec);
       });
 
+      // ===================== BARRA DE PROGRESO DE SCROLL =====================
       window.addEventListener("scroll", () => {
         const total =
           document.documentElement.scrollHeight - window.innerHeight;
@@ -676,6 +693,7 @@
         document.getElementById("progressBar").style.width = progress + "%";
       });
 
+      // ===================== BOTÓN "VOLVER ARRIBA" =====================
       const topBtn = document.getElementById("topBtn");
       window.addEventListener("scroll", () => {
         topBtn.classList.toggle("show", window.scrollY > 500);
@@ -684,6 +702,7 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
+      // ===================== CONTADORES Stats =====================
       const statEls = document.querySelectorAll(".stat-num");
       const statObserver = new IntersectionObserver(
         (entries) => {
@@ -717,6 +736,7 @@
       );
       statEls.forEach((n) => statObserver.observe(n));
 
+      // ===================== MODAL DE TARJETAS =====================
       const modalOverlay = document.getElementById("modalOverlay");
       const modalTitle = document.getElementById("modalTitle");
       const modalBody = document.getElementById("modalBody");
@@ -749,6 +769,7 @@
         if (e.key === "Escape") closeModal();
       });
 
+      // ===================== CARRUSEL =====================
       const track = document.getElementById("carouselTrack");
       const slides = track.children;
       const dotsWrap = document.getElementById("carDots");
@@ -791,6 +812,7 @@
         .getElementById("carNext")
         .addEventListener("click", () => goToSlide(current + 1));
 
+      // ===================== FONDO ANIMADO  =====================
       (function initParticles() {
         const container = document.getElementById("particles-js");
         const canvas = document.createElement("canvas");
@@ -811,9 +833,7 @@
             vy: (Math.random() - 0.5) * 0.35,
           }));
         }
-        function isLight() {
-          return rootEl.getAttribute("data-theme") === "light";
-        }
+
         function draw() {
           ctx.clearRect(0, 0, w, h);
           const lineColor = isLight() ? "rgba(20,20,20," : "rgba(200,255,92,";

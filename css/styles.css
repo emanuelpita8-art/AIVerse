@@ -98,6 +98,7 @@ img {
   display: block;
 }
 
+/* ===================== NAVBAR ===================== */
 nav {
   position: sticky;
   top: 0;
@@ -142,43 +143,7 @@ nav {
   color: var(--skyblue);
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid var(--border-strong);
-  background: var(--card);
-  color: var(--text);
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.theme-toggle:hover {
-  border-color: var(--skyblue);
-}
-
-.theme-toggle svg {
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
-}
-
-.theme-toggle .icon-moon {
-  display: block;
-}
-.theme-toggle .icon-sun {
-  display: none;
-}
-html[data-theme="light"] .theme-toggle .icon-moon {
-  display: none;
-}
-html[data-theme="light"] .theme-toggle .icon-sun {
-  display: block;
-}
-
+/* ==================== PORTADA ===================== */
 .hero {
   position: relative;
   padding: 120px 0 90px;
@@ -317,6 +282,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   color: var(--skyblue);
 }
 
+/* Demo de prompt*/
 .demo {
   background: var(--card);
   border: 1px solid var(--border);
@@ -367,6 +333,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   min-height: 3.2em;
 }
 
+/* ===================== Stats ===================== */
 .stats-section {
   padding: 50px 0;
   border-bottom: 1px solid var(--border);
@@ -423,6 +390,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   }
 }
 
+/* ===================== BLOQUES DE SECCIÓN ===================== */
 .block {
   padding: 100px 0;
 }
@@ -449,6 +417,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   font-size: clamp(1.7rem, 3.4vw, 2.4rem);
 }
 
+/* ===================== GRILLAS Y TARJETAS  ===================== */
 .grid {
   display: grid;
   gap: 22px;
@@ -547,6 +516,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   border: 0;
 }
 
+/* ===================== CARRUSEL  ===================== */
 .carousel-section {
   padding: 90px 0;
 }
@@ -639,6 +609,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   border-radius: 4px;
 }
 
+/* ===================== VENTAJAS Y RIESGOS ===================== */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -678,6 +649,7 @@ html[data-theme="light"] .theme-toggle .icon-sun {
   margin-bottom: 10px;
 }
 
+/* ===================== TABLA COMPARATIVA ===================== */
 table.compare {
   width: 100%;
   border-collapse: collapse;
@@ -708,6 +680,7 @@ table.compare tr:last-child td {
   border-bottom: none;
 }
 
+/* ===================== FUENTES  ===================== */
 .sources {
   list-style: none;
   margin: 0;
@@ -739,12 +712,14 @@ table.compare tr:last-child td {
   text-decoration: underline;
 }
 
+/* ===================== CTA FINAL ===================== */
 .cta {
   text-align: center;
   max-width: 680px;
   margin: 0 auto;
 }
 
+/* ===================== ANIMACIÓN DE ENTRADA ===================== */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -758,6 +733,7 @@ table.compare tr:last-child td {
   transform: translateY(0);
 }
 
+/* ===================== BOTÓN VOLVER ARRIBA ===================== */
 #topBtn {
   position: fixed;
   right: 24px;
@@ -790,6 +766,7 @@ table.compare tr:last-child td {
   background: var(--skyblue-dim);
 }
 
+/* ===================== MODAL DE TARJETAS ===================== */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -853,6 +830,7 @@ table.compare tr:last-child td {
   color: var(--skyblue);
 }
 
+/* ===================== PIE DE PÁGINA ===================== */
 footer {
   text-align: center;
   padding: 40px 20px 60px;
@@ -863,15 +841,6 @@ footer {
 }
 
 @media (max-width: 520px) {
-  #aiPanel {
-    right: 12px;
-    left: 12px;
-    width: auto;
-    bottom: 132px;
-  }
-  #aiToggle {
-    right: 12px;
-  }
   #topBtn {
     right: 12px;
   }
